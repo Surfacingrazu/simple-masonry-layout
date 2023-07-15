@@ -97,11 +97,20 @@ function sm_post_order_field(){
 }
 
 
+function sm_post_darkbox_field(){
+  ?>
+    <input type="checkbox" name="simple_post_darkbox" value="1" <?php checked(1, get_option('simple_post_darkbox'), true); ?> /> 
+  <?php
+}
+
+
 function sm_post_author_field(){
   ?>
     <input type="checkbox" name="simple_post_author" value="1" <?php checked(1, get_option('simple_post_author'), true); ?> /> 
   <?php
 }
+
+
 
 
 function sm_post_comment_field(){
@@ -128,6 +137,7 @@ function simple_masonry_admin_settings()
     add_settings_field("simple_post_per_page", "Posts To Display", "sm_post_per_field", "simple_masonry_options", "simple_masonry_settings_section");
     add_settings_field("simple_post_orderby", "Posts Order By", "sm_post_orderby_field", "simple_masonry_options", "simple_masonry_settings_section");
     add_settings_field("simple_post_order", "Posts Order", "sm_post_order_field", "simple_masonry_options", "simple_masonry_settings_section");
+    add_settings_field("simple_post_darkbox", "Check if you want to display Darkbox Gallery Popup ", "sm_post_darkbox_field", "simple_masonry_options", "simple_masonry_settings_section");
     add_settings_field("simple_post_author", "Check if you want to display  Post Author ", "sm_post_author_field", "simple_masonry_options", "simple_masonry_settings_section");
     add_settings_field("sm_post_comment", "Check if you want to display  Post Comments ", "sm_post_comment_field", "simple_masonry_options", "simple_masonry_settings_section");
     add_settings_field("sm_post_title", "Check if you want to display Post Title URL in gallery ", "sm_post_title_field", "simple_masonry_options", "simple_masonry_settings_section");
@@ -137,6 +147,7 @@ function simple_masonry_admin_settings()
     register_setting("simple_masonry_settings_section", "simple_post_per_page");
     register_setting("simple_masonry_settings_section", "simple_post_orderby");
     register_setting("simple_masonry_settings_section", "simple_post_order");
+    register_setting("simple_masonry_settings_section", "simple_post_darkbox");
     register_setting("simple_masonry_settings_section", "simple_post_author");
     register_setting("simple_masonry_settings_section", "sm_post_comment");
     register_setting("simple_masonry_settings_section", "sm_post_title");

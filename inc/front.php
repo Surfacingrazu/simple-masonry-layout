@@ -35,9 +35,19 @@ function simple_masonry_pagination($numpages = '', $pagerange = '', $paged='') {
    * and custom queries.
    */
   global $paged;
+
   if (empty($paged)) {
-    $paged = 1;
+   
+    if ( get_query_var('paged') ) {
+          $paged = get_query_var('paged');
+      } elseif ( get_query_var('page') ) {
+          $paged = get_query_var('page');
+      } else {
+          $paged = 1;
+      }
+     
   }
+
   if ($numpages == '') {
     global $wp_query;
     $numpages = $wp_query->max_num_pages;
@@ -92,19 +102,19 @@ function simple_masonry_shortcode($atts, $content = null) {
 
         $paged = get_query_var( 'paged' ) ?: ( get_query_var( 'page' ) ?: 1 );
 
+
         $sm_args = array(
-                'posts_per_page'   => post_per_page_simple(get_option('simple_post_per_page')),
-                'orderby'          => get_option('simple_post_orderby'),
-                'order'            => get_option('simple_post_order'),
-                'post_type'        => $sm_post_type,
-                'category_name'    => $sm_category_name,
-                'suppress_filters' => false,
-                'post_status'      => 'publish',
-                'paged'            => $paged
-                
-        
-          );
-     
+                    'posts_per_page'   => intval(post_per_page_simple(get_option('simple_post_per_page'))),
+                    'orderby'          => get_option('simple_post_orderby'),
+                    'order'            => get_option('simple_post_order'),
+                    'post_type'        => $sm_post_type,
+                    'category_name'    => $sm_category_name,
+                    'suppress_filters' => false,
+                    'post_status'      => 'publish',
+                    'paged'            => $paged,
+                    'meta_key'         => $gallery == 'yes' ? '_thumbnail_id' : ''
+              );
+
         $wp_query = new WP_Query($sm_args);
 
         global $post;
@@ -131,15 +141,26 @@ function simple_masonry_shortcode($atts, $content = null) {
             <div class="grid-sm-boxes-in post-<?php echo $post->ID;?>">
                <div class="grid-sm-border">
                   <?php
-                     if($thumbnail) :
-                      echo '<img class="img-responsive" src="' . $thumbnail . '" data-darkbox="'. $thumbnail .'"
+
+                    if($thumbnail) :
+
+                     if (get_option('simple_post_darkbox')) : 
+
+                       echo '<img class="img-responsive" src="' . $thumbnail . '" data-darkbox="'. $thumbnail .'"
                         data-darkbox-description="<b>' .get_the_title().'</b>"> ';
+
+                      else:
+
+                        echo '<a href ="'.get_the_permalink().'"><img class="img-responsive" src="' . $thumbnail . '"></a>';
+
                      endif;
+
+                    endif;
                     ?>
 
-             <?php if($gallery == 'yes') : ?>  
+             <?php if ($gallery == 'yes') : ?>  
 
-               <?php if(get_option('sm_post_title')) : ?>
+               <?php if (get_option('sm_post_title')) : ?>
 
                 <div class="sm-gallery-title"> 
                   <a href="<?php the_permalink();?>">                  
@@ -152,26 +173,26 @@ function simple_masonry_shortcode($atts, $content = null) {
 
             <?php endif ?>
                
-               <?php if($gallery == 'no') { ?>
+               <?php if ($gallery == 'no') { ?>
                 <div class="sm-grid-boxes-caption">
                     <div class="sm-post-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></div>                
                     <div class="sm-list-inline sm-grid-boxes-news">
                        <div class="sm-meta"> 
                         <span class="sm-meta-part">
-                      <?php if(get_option('simple_post_author')) : ?>
+                      <?php if (get_option('simple_post_author')) : ?>
                           <span class="sm-meta-poster">
                           <i class="sm-icon-author"></i><a href="<?php echo get_author_posts_url( get_the_author_meta($post->post_author), get_the_author_meta( 'user_nicename', $post->post_author ) ); ?>"><?php  esc_attr(the_author_meta( 'display_name', $post->post_author ));?></a></span> 
                       <?php endif;?>
                          <span class="sm-meta-date"> <i class="sm-icon-date"> 
                         </i><a href="<?php echo esc_url(get_day_link(get_post_time('Y','',$post->ID), get_post_time('m','',$post->ID), get_post_time('j','',$post->ID))); ?>"><?php echo esc_attr($sm_date); ?></a> </span> 
-                       <?php if(get_option('sm_post_comment')) : ?>
+                       <?php if (get_option('sm_post_comment')) : ?>
                          <span class="sm-meta-likes"><i class="sm-icon-comments"></i><?php echo get_comments_number($post->ID);?></span> 
                        <?php endif;?>
                       </span>
                      </div>
                     </div>  
                    <div class="sm-grid-boxes-quote">
-                   <?php if (has_excerpt ($post->ID)) the_excerpt(); else echo '<p>' . wp_trim_words( get_the_content(), 20 ) . '</p>'; ?>
+                    <?php if (has_excerpt ($post->ID)) the_excerpt(); else echo '</p>' . strip_shortcodes(wp_trim_words( get_the_content(), 20 )) . '</p>'; ?>
                    </div>
                 </div>
               <?php } ?>

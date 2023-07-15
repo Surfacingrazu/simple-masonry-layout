@@ -2,8 +2,8 @@
 Contributors: razzu
 Tags: masonry,masonry plugin,jquery masonry,masonry layout,grid layout,shortcode,blog masonry,gallery masonry,custom post type masonry,grid loading effect,jquery popup gallery,animation gallery,scroll masonry,responsive jquery popup gallery masonry
 Requires at least: 4.2
-Tested up to: 4.7.3
-Stable tag: 1.2
+Tested up to: 4.8.1
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,12 +25,12 @@ This plugin will modify your Blogs to better looking advance Masonry(Grid) Layou
 
 <strong>Check Out Demos</strong>
 
-* <a href="http://demomasonry.ospreythemes.com/masonry-layout-of-posts/" target="_blank">Click Here For Simple Masonry Layout of Posts Demo</a>
-* <a href="http://demomasonry.ospreythemes.com/masonry-layout-gallery/" target="_blank">Click Here For Simple Masonry Layout Gallery Demo</a>
+* <a href="https://www.cqthemes.com/free-plugin-demo/simple-masonry-layout/simple-masonry-layout/" target="_blank">Click Here For Simple Masonry Layout of Posts Demo</a>
+* <a href="https://www.cqthemes.com/free-plugin-demo/simple-masonry-layout/simple-masonry-gallery/" target="_blank">Click Here For Simple Masonry Layout Gallery Demo</a>
 
 <strong>Could not see Plugin in an Action or Confused with implementation of Shortcode?</strong>
 
-* Please use this <a href="http://demomasonry.ospreythemes.com/contact-us/" target="_blank">Contant Form</a> and Feel free to Contact. Or Post it to Support Forum.
+* Please use this <a href="https://www.cqthemes.com/free-plugin-demo/simple-masonry-layout/contact/" target="_blank">Contact Form</a> and Feel free to Contact. Or Post it to Support Forum.
 
 Found this Plugin Useful or Not ? Please do not forget to review this Plugin.
 
@@ -40,6 +40,8 @@ Found this Plugin Useful or Not ? Please do not forget to review this Plugin.
 2. Activate the plugin through the Plugins menu into WordPress admin area
 3. Configure your neccessary settings in Admin-panel `Settings -> Simple Masonry Layout`.
 4. Add Shortcode [simple_masonry] in editor. For using in template files, &lt;? echo do_shortcode('[simple_masonry]'); ?&gt;. Other shortcode are available in plugin settings Panel. i.e :- `Settings-> Simple Masonry Layout`.
+
+Still Confused On Installation? Please Refer this <a href="https://www.cqthemes.com/simple-masonry-layout-documentation/" target="_blank">link</a>.
 
 == Frequently Asked Questions ==
 
@@ -62,6 +64,14 @@ Yes, Masonry Layout is Responsive. It has Responsive Jquery popup too.
 
 
 == Changelog ==
+
+= 1.3 =
+
+* Minor Fixing on Pagination
+* Added setting for enable or disable Jquery Popup
+* Added Featured Image link to post permalink
+* jQuery version conflict resolved
+* Fixed Overwritting wordpress default jQuery version with 1.8.2
 
 = 1.2 =
 * Added shortcode for Masonry Layout Blog from Specific Category

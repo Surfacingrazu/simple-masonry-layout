@@ -9,7 +9,7 @@
 
  * Author: Raju Tako
 
- * Version: 1.2
+ * Version: 1.3
 
  * Author URI: https://profiles.wordpress.org/razzu
 
@@ -35,9 +35,9 @@ function simple_masonry_enqueue_scripts()
 
     global $post;
 
-    if( has_shortcode( $post->post_content, 'simple_masonry') ) {
+    if( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'simple_masonry') ) {
 
-        	wp_register_style( 'sm-style', plugin_dir_url( __FILE__ ) . 'css/sm-style.css');
+            wp_register_style( 'sm-style', plugin_dir_url( __FILE__ ) . 'css/sm-style.css');
 
             wp_register_style( 'darkbox-style', plugin_dir_url( __FILE__ ) . 'css/darkbox.css');
 
@@ -50,21 +50,8 @@ function simple_masonry_enqueue_scripts()
             wp_enqueue_style( 'font-awesome');
 
 
-
-
-
-            if( !is_admin())
-
-            {
-
-            wp_deregister_script( 'jquery' );
-
-            wp_register_script( 'jquery', plugin_dir_url( __FILE__ ) . 'js/jquery.min.js', false, '1.8.2', true );
-
             wp_enqueue_script( 'jquery' );
-
-            }
-
+            
             wp_enqueue_script( 'modernizr-script' );
 
             wp_enqueue_script( 'jquery-masonry' );  
@@ -100,16 +87,6 @@ function simple_masonry_enqueue_scripts()
 add_action( 'wp_enqueue_scripts', 'simple_masonry_enqueue_scripts' );
 
 
-
-
-
-
-
 include('inc/admin.php'); //admin option settings
 
 include('inc/front.php'); // frontend shortcode 
-
-
-
-
-

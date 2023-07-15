@@ -5,28 +5,28 @@
     var c = 0; // counter
     var $images = {};
     var n = 0;
-    var $prevNext = $("<div id='darkbox_prev'/><div id='darkbox_next'/>").on("click", function (e) {
+    var $prevNext = jQuery("<div id='darkbox_prev'/><div id='darkbox_next'/>").on("click", function (e) {
         e.stopPropagation();
         var isNext = this.id === "darkbox_next";
         c = (isNext ? c++ : --c) < 0 ? n - 1 : c % n;
         $images.eq(c).click();
     });
-    var $darkboxDescription = $("<div/>", {
+    var $darkboxDescription = jQuery("<div/>", {
         "id": "darkbox-description"
     });
-    var $darkbox = $("<div/>", {
+    var $darkbox = jQuery("<div/>", {
         "id": "darkbox",
         html: $prevNext
     }).on("click", function () {
-        $(this).removeClass("on");
+        jQuery(this).removeClass("on");
     }).append($darkboxDescription).appendTo("body");
 
-    $(document).on("click", "[data-darkbox]", function (e) {
+    jQuery(document).on("click", "[data-darkbox]", function (e) {
 
         e.preventDefault();
         e.stopPropagation();
 
-        $images = $('[data-darkbox!=""][data-darkbox]');
+        $images = jQuery('[data-darkbox!=""][data-darkbox]');
         n = $images.length;
 
         var that = this;
@@ -35,7 +35,7 @@
         var o = this.getBoundingClientRect();
         var imgSRC = this.dataset.darkbox ? this.dataset.darkbox : this.src;
         if (!imgSRC)
-            imgSRC = $("[data-darkbox!=''][data-darkbox]").attr("data-darkbox");
+            imgSRC = jQuery("[data-darkbox!=''][data-darkbox]").attr("data-darkbox");
         var newImg = new Image();
         newImg.onload = function () {
             c = $images.index(that);
@@ -50,7 +50,7 @@
                 height: that.height,
                 width: that.width
             });
-            $darkboxDescription.html($(that).attr("data-darkbox-description"));
+            $darkboxDescription.html(jQuery(that).attr("data-darkbox-description"));
             setTimeout(function () {
                 if (!$darkbox.hasClass("on")) {
                     $darkbox.css({transition: "0.8s"}).addClass("on");
@@ -61,14 +61,14 @@
 
     });
 
-    $(document).on("keyup", function (e) {
+    jQuery(document).on("keyup", function (e) {
         var k = e.which;
         if (k === 27) /*ESC */
-            $("#darkbox").click(); // close Darkbox
+            jQuery("#darkbox").click(); // close Darkbox
         if (k === 37) /*LEFT*/
-            $("#darkbox_prev").click();
+            jQuery("#darkbox_prev").click();
         if (k === 39) /*RIGHT*/
-            $("#darkbox_next").click();
+            jQuery("#darkbox_next").click();
     });
 
 }());
