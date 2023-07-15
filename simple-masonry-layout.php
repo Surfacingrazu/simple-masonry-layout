@@ -9,11 +9,11 @@
 
  * Author: Raju Tako
 
- * Version: 1.3.1
+ * Version: 1.3.2
 
  * Author URI: https://profiles.wordpress.org/razzu
 
- * 
+ *
 
  */
 
@@ -26,17 +26,21 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 //Enqueue script and style
 
 
-function simple_masonry_enqueue_scripts() {   
+function simple_masonry_enqueue_scripts() {
+
+         global $post;
+
+         if (has_shortcode( $post->post_content, 'simple_masonry')):
 
         	wp_register_style( 'sm-style', plugin_dir_url( __FILE__ ) . 'css/sm-style.css');
             wp_register_style( 'darkbox-style', plugin_dir_url( __FILE__ ) . 'css/darkbox.css');
-            wp_register_style( 'font-awesome', plugin_dir_url( __FILE__ ) . 'css/font-awesome.min.css');
+            wp_register_style( 'font-awesome', ("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"));
             wp_enqueue_style( 'sm-style');
             wp_enqueue_style( 'darkbox-style');
             wp_enqueue_style( 'font-awesome');
             wp_enqueue_script( 'jquery' );
             wp_enqueue_script( 'modernizr-script' );
-            wp_enqueue_script( 'jquery-masonry' );  
+            wp_enqueue_script( 'jquery-masonry' );
             wp_register_script( 'modernizr-script', plugin_dir_url( __FILE__ ) . 'js/modernizr.custom.js', array('jquery'), '', false );
             wp_register_script( 'imagesloaded-script', plugin_dir_url( __FILE__ ) . 'js/imagesloaded.js', array('jquery'), '', true );
             wp_register_script( 'classie-script', plugin_dir_url( __FILE__ ) . 'js/classie.js', array('jquery'), '', true );
@@ -49,7 +53,7 @@ function simple_masonry_enqueue_scripts() {
             wp_enqueue_script( 'main-script' );
             wp_enqueue_script( 'darkbox-script' );
 
-  
+       endif;
 
 }
 
@@ -59,9 +63,4 @@ add_action( 'wp_enqueue_scripts', 'simple_masonry_enqueue_scripts' );
 
 include('inc/admin.php'); //admin option settings
 
-include('inc/front.php'); // frontend shortcode 
-
-
-
-
-
+include('inc/front.php'); // frontend shortcode

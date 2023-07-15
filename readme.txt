@@ -2,8 +2,8 @@
 Contributors: razzu
 Tags: masonry,masonry plugin,jquery masonry,masonry layout,grid layout,shortcode,blog masonry,gallery masonry,custom post type masonry,grid loading effect,jquery popup gallery,animation gallery,scroll masonry,responsive jquery popup gallery masonry
 Requires at least: 4.2
-Tested up to: 4.9.6
-Stable tag: 1.3.1
+Tested up to: 5.9.2
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,15 +22,6 @@ This plugin will modify your Blogs to better looking advance Masonry(Grid) Layou
 * Masonry Layout with Simple Responsive Gallery Popup.
 * Simple Shortcode can be used for Masonry Layout.
 * Shortcode can be either used in editor or can be used in template files.
-
-<strong>Check Out Demos</strong>
-
-* <a href="https://www.cqthemes.com/free-plugin-demo/simple-masonry-layout/simple-masonry-layout/" target="_blank">Click Here For Simple Masonry Layout of Posts Demo</a>
-* <a href="https://www.cqthemes.com/free-plugin-demo/simple-masonry-layout/simple-masonry-gallery/" target="_blank">Click Here For Simple Masonry Layout Gallery Demo</a>
-
-<strong>Could not see Plugin in an Action or Confused with implementation of Shortcode?</strong>
-
-* Please use this <a href="https://www.cqthemes.com/free-plugin-demo/simple-masonry-layout/contact/" target="_blank">Contact Form</a> and Feel free to Contact. Or Post it to Support Forum.
 
 Found this Plugin Useful or Not ? Please do not forget to review this Plugin.
 
@@ -64,6 +55,12 @@ Yes, Masonry Layout is Responsive. It has Responsive Jquery popup too.
 
 
 == Changelog ==
+
+= 1.3.2 =
+
+* Minor error fixings on Scripts
+* cdn link added for font-awesome
+
 
 = 1.3.1 =
 

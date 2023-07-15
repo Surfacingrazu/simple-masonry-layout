@@ -91,6 +91,8 @@ function simple_masonry_shortcode($atts, $content = null) {
 
         ob_start();
 
+        global $post;
+
         extract(shortcode_atts(array(
                 
                 'sm_post_type'        => 'post',
@@ -116,10 +118,6 @@ function simple_masonry_shortcode($atts, $content = null) {
               );
 
         $wp_query = new WP_Query($sm_args);
-
-        global $post;
-
-        $sm_post = get_posts($sm_args);
        
      ?>
 
@@ -127,14 +125,11 @@ function simple_masonry_shortcode($atts, $content = null) {
      
         <div class="sm-grid sm-effect" id="sm-grid-layout">  
 
-          <?php 
-         
-           foreach ($sm_post as $post) : 
-
-                  setup_postdata($post);
+          <?php while ($wp_query->have_posts()) : $wp_query->the_post() ;
 
                 $thumbnail = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
                 $sm_date =  get_the_date( get_option('date_format'), $post->ID );
+                
             ?>
   
             <?php if ($gallery == 'no' || $thumbnail) { ?>
@@ -201,7 +196,7 @@ function simple_masonry_shortcode($atts, $content = null) {
           </div>
             <?php }?>
 
-    <?php endforeach ; ?>
+    <?php endwhile ; ?>
  
         </div>
       
