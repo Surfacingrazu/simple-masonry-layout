@@ -2,8 +2,8 @@
 Contributors: razzu
 Tags: masonry,masonry plugin,jquery masonry,masonry layout,grid layout,shortcode,blog masonry,gallery masonry,custom post type masonry,grid loading effect,jquery popup gallery,animation gallery,scroll masonry,responsive jquery popup gallery masonry
 Requires at least: 4.2
-Tested up to: 4.8.1
-Stable tag: 1.3
+Tested up to: 4.9.6
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,6 +64,11 @@ Yes, Masonry Layout is Responsive. It has Responsive Jquery popup too.
 
 
 == Changelog ==
+
+= 1.3.1 =
+
+* Minor Fixing on enqueue script and style
+
 
 = 1.3 =
 
