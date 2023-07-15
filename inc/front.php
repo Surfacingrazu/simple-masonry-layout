@@ -19,6 +19,9 @@ function post_per_page_simple($check_spp){
 
 
 function simple_masonry_shortcode($atts, $content = null) {
+
+        ob_start();
+
         extract(shortcode_atts(array(
                 
                 'sm_post_type'        => 'post',
@@ -43,8 +46,8 @@ function simple_masonry_shortcode($atts, $content = null) {
   ?>
 
 
-  <div class="blog_masonry_numcol">
-        <div class="container content grid-boxes">            
+    <div class="blog_masonry_numcol" >
+        <div class="grid effect" id="grid">            
           <?php 
  
            foreach ($sm_post as $post) : 
@@ -56,15 +59,30 @@ function simple_masonry_shortcode($atts, $content = null) {
   
             <?php if ($gallery == 'no' || $thumbnail) { ?>
             <div class="grid-boxes-in">
-                <a href="<?php the_permalink();?>">
+               <div class="grid-sm-border">
                   <?php
                      if($thumbnail) :
-                      echo '<img class="img-responsive" src="' . $thumbnail . '" > ';
+                      echo '<img class="img-responsive" src="' . $thumbnail . '" data-darkbox="'. $thumbnail .'"
+                        data-darkbox-description="<b>' .get_the_title().'</b>"> ';
                      endif;
                     ?>
-              </a>
+
+             <?php if($gallery == 'yes') : ?>  
+
+               <?php if(get_option('sm_post_title')) : ?>
+
+                <div class="sm-gallery-title"> 
+                  <a href="<?php the_permalink();?>">                  
+                     <span class="sm-gallery-textPart"><?php the_title();?></span>
+                     <span class="sm-gallery-arrow"><?php echo '<img src="' . plugins_url( '../images/arrow.png', __FILE__ ) . '" > ';?></span> 
+                  </a>                 
+                </div>
+
+              <?php endif; ?>
+
+            <?php endif ?>
                
-               <?php if($gallery == 'no'){ ?>
+               <?php if($gallery == 'no') { ?>
                 <div class="grid-boxes-caption">
                     <h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>                
                     <div class="list-inline grid-boxes-news">
@@ -86,16 +104,20 @@ function simple_masonry_shortcode($atts, $content = null) {
                 </div>
               <?php } ?>
                 
-            </div>
+              </div>
+          </div>
             <?php }?>
     <?php endforeach ; ?>
 
     <?php wp_reset_postdata(); ?>
               
-        </div><!--/container-->
+        </div>
     </div>
 
 
 <?php
+
+    return ob_get_clean();
+
 }
 add_shortcode("simple_masonry", "simple_masonry_shortcode");

@@ -3,7 +3,6 @@
 function simple_masonry_settings(){
 
 ?>
-
      <div class="wrap">
         <h1>Simple Masonry Layout Settings</h1>
         <form action='options.php' method='post'>
@@ -13,7 +12,7 @@ function simple_masonry_settings(){
                 submit_button(); 
             ?>          
         </form>
-        </div>
+     </div>
   <?php
  
 }
@@ -111,6 +110,14 @@ function sm_post_comment_field(){
 }
 
 
+function sm_post_title_field(){
+  ?>
+    <input type="checkbox" name="sm_post_title" value="1" <?php checked(1, get_option('sm_post_title'), true); ?> /> 
+    <i>This setting is only used for Masonry Layout gallery of Posts and Custom Post Type .</i>
+  <?php
+}
+
+
 
 
 function simple_masonry_admin_settings()
@@ -122,6 +129,7 @@ function simple_masonry_admin_settings()
     add_settings_field("simple_post_order", "Posts Order", "sm_post_order_field", "simple_masonry_options", "simple_masonry_settings_section");
     add_settings_field("simple_post_author", "Check if you want to display  Post Author ", "sm_post_author_field", "simple_masonry_options", "simple_masonry_settings_section");
     add_settings_field("sm_post_comment", "Check if you want to display  Post Comments ", "sm_post_comment_field", "simple_masonry_options", "simple_masonry_settings_section");
+    add_settings_field("sm_post_title", "Check if you want to display Post Title URL in gallery ", "sm_post_title_field", "simple_masonry_options", "simple_masonry_settings_section");
 
 
     register_setting("simple_masonry_settings_section", "simple_masonay_shortcode");
@@ -130,6 +138,7 @@ function simple_masonry_admin_settings()
     register_setting("simple_masonry_settings_section", "simple_post_order");
     register_setting("simple_masonry_settings_section", "simple_post_author");
     register_setting("simple_masonry_settings_section", "sm_post_comment");
+    register_setting("simple_masonry_settings_section", "sm_post_title");
 }
 
 add_action("admin_init", "simple_masonry_admin_settings");
