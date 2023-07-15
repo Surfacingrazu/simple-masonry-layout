@@ -1,0 +1,135 @@
+
+.blog_masonry_numcol {
+    padding-bottom: 60px;
+}
+.blog_masonry_numcol .grid-boxes-in {
+    border: 1px solid rgb(238, 238, 238);
+    margin-bottom: 30px;
+    padding: 0;
+
+}
+.blog_masonry_numcol .grid-boxes-caption {
+    padding: 15px;
+}
+.blog_masonry_numcol h3 {
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 28px;
+	margin:0;
+}
+.blog_masonry_numcol h3 a {
+    /*color: rgb(85, 85, 85);*/
+	margin:0;
+}
+
+.grid-boxes-news .meta-part a{
+  color: rgb(85, 85, 85)
+
+}
+
+
+.blog_masonry_numcol h3 a:hover {
+    color: rgb(114, 192, 44);
+}
+.blog_masonry_numcol h3 a:hover {
+    color: rgb(114, 192, 44);
+}
+.blog_masonry_numcol ul.grid-boxes-news {
+    margin-bottom: 15px;
+}
+.blog_masonry_numcol ul.grid-boxes-news li {
+    font-size: 12px;
+}
+.blog_masonry_numcol ul.grid-boxes-news li, .blog_masonry_numcol ul.grid-boxes-news li a {
+    color: rgb(119, 119, 119);
+}
+.blog_masonry_numcol ul.grid-boxes-news li a:hover {
+    color: rgb(114, 192, 44);
+}
+.grid-boxes-caption.grid-boxes-quote {
+    background: none repeat scroll 0 0 rgba(51, 51, 51, 0.5);
+    padding: 30px;
+    text-align: center;
+}
+.grid-boxes-quote p {
+    position: relative;
+}
+.grid-boxes-quote p::after {
+    content: " \" ";
+    font-family: Tahoma;
+    margin-left: 10px;
+    position: absolute;
+}
+.grid-boxes-quote p::before {
+    content: " \" ";
+    font-family: Tahoma;
+    margin-left: -15px;
+    position: absolute;
+}
+.grid-boxes-quote p, .grid-boxes-quote p a, .grid-boxes-quote span {
+    color: rgb(255, 255, 255);
+    font-family:Lato, Arial, Helvetica, sans-serif, Amperzand;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.grid-boxes-quote span {
+    font-size: 12px;
+}
+
+.blog_masonry_numcol {
+    opacity: 0;
+}
+/**icons **/
+
+.icon-date:before{
+    content: "\f073";
+    font-family: FontAwesome;
+    font-style: normal;
+    margin-right: 6px;
+}
+
+.icon-author:before{
+    content: "\f007";
+    font-family: FontAwesome;
+    font-style: normal;
+    margin-right: 6px;
+}
+
+.icon-views:before{
+    content: "\f06e";
+    font-family: FontAwesome;
+    font-style: normal;
+    margin-right: 6px;
+}
+
+.icon-comments:before{
+    content: "\f075";
+    font-family: FontAwesome;
+    font-style: normal;
+    margin-right: 6px;
+}
+
+.meta-date > a {
+    margin-right: 12px;
+}
+
+.meta-poster {
+    margin-right: 15px;
+}
+
+
+.meta-likes {
+    margin-right: 15px;
+}
+
+.list-inline.grid-boxes-news {
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+#surfacing_loading{
+
+    height: 80px;
+    text-align: center;
+}
