@@ -29,10 +29,11 @@ function sm_layout_shortcode(){
     ?>
       <ul>
         <li><strong>All Shortcodes Outputs Masonry Layout according to settings Below.</strong></li>
-        <li><strong>Masonry Layout of Default posts : </strong><code>[simple_masonry]</code></li>
-        <li><strong>Masonry Layout of  posts of your choice : </strong><code>[simple_masonry sm_post_type="post_type"]</code>. For example if post_type is testimonial, shortcode will be <code>[simple_masonry sm_post_type="testimonial"]</code></li>
-        <li><strong>Masonry Layout of posts as gallery : </strong><code>[simple_masonry gallery="yes"]</code></li>
-         <li><strong>Masonry Layout of posts of your choice as gallery : </strong><code>[simple_masonry sm_post_type="post_type" gallery="yes"]</code> For example if post_type is testimonial, shortcode will be <code>[simple_masonry sm_post_type="testimonial" gallery="yes"]</code></li>
+        <li><strong>Masonry Layout of Default posts : </strong>[simple_masonry]</li>
+        <li><strong>Masonry Layout of Default posts from Specific Category  : </strong>[simple_masonry sm_category_name="catergory_slug"]. For example if catergory_slug is travel, shortcode will be [simple_masonry sm_category_name="travel"]</li>
+        <li><strong>Masonry Layout of posts of your choice : </strong>[simple_masonry sm_post_type="post_type"]. For example if post_type is testimonial, shortcode will be [simple_masonry sm_post_type="testimonial"]</li>
+        <li><strong>Masonry Layout of posts as gallery : </strong>[simple_masonry gallery="yes"]</li>
+        <li><strong>Masonry Layout of posts of your choice as gallery : </strong>[simple_masonry sm_post_type="post_type" gallery="yes"] For example if post_type is testimonial, shortcode will be [simple_masonry sm_post_type="testimonial" gallery="yes"]</li>
          <br/>
         
 

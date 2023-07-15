@@ -2,8 +2,8 @@
 Contributors: razzu
 Tags: masonry,masonry plugin,jquery masonry,masonry layout,grid layout,shortcode,blog masonry,gallery masonry,custom post type masonry,grid loading effect,jquery popup gallery,animation gallery,scroll masonry,responsive jquery popup gallery masonry
 Requires at least: 4.2
-Tested up to: 4.6.1
-Stable tag: 1.1
+Tested up to: 4.7.3
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,16 +11,28 @@ With simple shortcode, Masonry Layout in action.
 
 == Description ==
 
-A simple  Masonry  Layout plugin. with simple shortcode, You can add Masonry Layout For Posts , custom post types .And Even Masonry Layout Gallery For Posts and custom post type. Very easy to Use with very simple shortcodes. Better Grid View of Posts, custom post types.
+A Simple  Masonry Layout plugin. with simple shortcode, You can add Masonry Layout For Posts , custom post types .And Even Masonry Layout Gallery For Posts and custom post type. Very easy to Use with very simple shortcodes. Better Grid View of Posts, custom post types.
 
 This plugin will modify your Blogs to better looking advance Masonry(Grid) Layout with use of simple available shortcodes.
 
 * Masonry Layout Blog.
+* Masonry Layout Blog from Specific Category.
 * Masonry Layout custom post type.
 * Masonry Layout Gallery For Posts 
-* Mansory Layout with Simple Responsive Gallery Popup.
+* Masonry Layout with Simple Responsive Gallery Popup.
 * Simple Shortcode can be used for Masonry Layout.
 * Shortcode can be either used in editor or can be used in template files.
+
+<strong>Check Out Demos</strong>
+
+* <a href="http://demomasonry.ospreythemes.com/masonry-layout-of-posts/" target="_blank">Click Here For Simple Masonry Layout of Posts Demo</a>
+* <a href="http://demomasonry.ospreythemes.com/masonry-layout-gallery/" target="_blank">Click Here For Simple Masonry Layout Gallery Demo</a>
+
+<strong>Could not see Plugin in an Action or Confused with implementation of Shortcode?</strong>
+
+* Please use this <a href="http://demomasonry.ospreythemes.com/contact-us/" target="_blank">Contant Form</a> and Feel free to Contact. Or Post it to Support Forum.
+
+Found this Plugin Useful or Not ? Please do not forget to review this Plugin.
 
 == Installation ==
 
@@ -35,9 +47,9 @@ This plugin will modify your Blogs to better looking advance Masonry(Grid) Layou
 
 Yes, this plugin is 100% compatible with every free, custom and paid theme. You can even use this plugin to modify default Wordpress theme into better looking Masonry(Grid) Layout theme with simple available shortcodes.
 
-= Is Mansory Layout Responsive ? =
+= Is Masonry Layout Responsive ? =
 
-Yes, Mansory Layout is Responsive. It has Responsive Jquery popup too.
+Yes, Masonry Layout is Responsive. It has Responsive Jquery popup too.
 
 
 
@@ -51,6 +63,10 @@ Yes, Mansory Layout is Responsive. It has Responsive Jquery popup too.
 
 == Changelog ==
 
+= 1.2 =
+* Added shortcode for Masonry Layout Blog from Specific Category
+* Added Pagination
+* Added allow multilanguage
 
 = 1.1 =
 * Added Grid Loading Effect/Animation on scroll
@@ -60,7 +76,3 @@ Yes, Mansory Layout is Responsive. It has Responsive Jquery popup too.
 
 = 1.0 =
 * This is initial version of the plugin.
-
-
-
-
