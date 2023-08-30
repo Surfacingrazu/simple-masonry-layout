@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: razzu
-Tags: masonry,masonry plugin,jquery masonry,masonry layout,grid layout,shortcode,blog masonry,gallery masonry,custom post type masonry,grid loading effect,jquery popup gallery,animation gallery,scroll masonry,responsive jquery popup gallery masonry
+Tags: masonry,masonry plugin,jquery masonry,masonry layout,grid layout,shortcode,blog masonry,gallery masonry,custom post type masonry,grid loading effect,jquery popup gallery,animation gallery,scroll masonry,responsive jquery popup gallery masonry,gallery plugin
 Requires at least: 4.2
-Tested up to: 5.9.2
-Stable tag: 1.3.4
+Tested up to: 6.3.1
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ This plugin will modify your Blogs to better looking advance Masonry(Grid) Layou
 * Masonry Layout Blog.
 * Masonry Layout Blog from Specific Category.
 * Masonry Layout custom post type.
-* Masonry Layout Gallery For Posts 
+* Masonry Layout Gallery For Posts
 * Masonry Layout with Simple Responsive Gallery Popup.
 * Simple Shortcode can be used for Masonry Layout.
 * Shortcode can be either used in editor or can be used in template files.
@@ -46,7 +46,7 @@ Yes, Masonry Layout is Responsive. It has Responsive Jquery popup too.
 
 
 
- 
+
 == Screenshots ==
 
 1. Screenshot displaying Simple Masonry Layout of Posts
@@ -56,9 +56,14 @@ Yes, Masonry Layout is Responsive. It has Responsive Jquery popup too.
 
 == Changelog ==
 
+= 2.0 =
+
+* Shortcode Generator added
+* Simple Masonry Layout CPT added
+
 = 1.3.4 =
 
-* OOP Concept implementation 
+* OOP Concept implementation
 
 = 1.3.3 =
 

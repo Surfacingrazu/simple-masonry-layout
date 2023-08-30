@@ -11,10 +11,10 @@ Darkbox
     background:rgba(0,0,0,0.8) no-repeat none 50%;
     background-size: contain;
     box-shadow:0 0 0 3000px rgba(0,0,0,0.8);
-    opacity:0; 
+    opacity:0;
     visibility:hidden;
 }
-#darkbox.on{ 
+#darkbox.on{
     opacity:1;
     visibility:visible;
     height:90% !important;

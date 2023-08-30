@@ -14,88 +14,51 @@
 
 }
 
-
-
 .smblog_masonry_numcol .sm-grid-boxes-caption {
 
    padding-top: 20px;
-
    padding-left: 15px;
 
 }
 
-
-
-
-
-
-
 .smblog_masonry_numcol .sm-post-title {
 
     font-size: 20px;
-
     font-weight: 200;
-
     line-height: 28px;
-
     margin:0;
-
-   
-
 }
 
 
-
-
 .smblog_masonry_numcol ul.sm-grid-boxes-news {
-
     margin-bottom: 15px;
-
 }
 
 
 
 .smblog_masonry_numcol ul.sm-grid-boxes-news li {
-
     font-size: 12px;
-
 }
 
 
 
 .smblog_masonry_numcol ul.sm-grid-boxes-news li, .smblog_masonry_numcol ul.sm-grid-boxes-news li a {
-
     color: rgb(119, 119, 119);
-
 }
-
 
 
 .smblog_masonry_numcol ul.sm-grid-boxes-news li a:hover {
-
     color: rgb(114, 192, 44);
-
 }
-
 
 
 .grid-sm-border{
-
-    border: 1px solid rgb(238, 238, 238); 
-
+    border: 1px solid rgb(238, 238, 238);
 }
-
-
 
 .sm-grid-boxes-news .sm-meta-part a{
-
   color: rgb(85, 85, 85)
-
-
-
 }
-
-
 
 .sm-grid-boxes-caption.grid-boxes-quote {
 
@@ -112,7 +75,7 @@
 
 .sm-grid {
 
-    
+
 
     margin: 0 auto;
 
@@ -152,7 +115,7 @@
 
 .sm-grid .grid-sm-boxes-in a, .sm-grid .grid-sm-boxes-in img {
 
-    
+
 
     border: none;
 
@@ -413,7 +376,7 @@
 }
 
 
-    
+
 
 nav.sm-pagination span.current {
 
@@ -461,7 +424,7 @@ nav.sm-pagination a{
 
 
 
-nav.sm-pagination a:hover { 
+nav.sm-pagination a:hover {
 
     background-color: #eee;
 

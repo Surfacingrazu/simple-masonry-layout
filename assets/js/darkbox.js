@@ -5,7 +5,7 @@
     var c = 0; // counter
     var $images = {};
     var n = 0;
-    var $prevNext = jQuery("<div id='darkbox_prev'/><div id='darkbox_next'/>").on("click", function (e) {
+    var $prevNext = jQuery("<div id='darkbox_prev'></div><div id='darkbox_next'></div>").on("click", function (e) {
         e.stopPropagation();
         var isNext = this.id === "darkbox_next";
         c = (isNext ? c++ : --c) < 0 ? n - 1 : c % n;
